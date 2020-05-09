@@ -1,7 +1,10 @@
 {
   "name": "micro-front-end-two",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "(ISC OR GPL-3.0)",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -12,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set NODE_ENV=production&& npx babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   }
 }
