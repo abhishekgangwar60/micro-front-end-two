@@ -1,7 +1,1 @@
-import React from "react";
-
-function MicroFrontEndTwo() {
-  return /*#__PURE__*/React.createElement("div", null, " This is micro frontend two");
-}
-
-export default MicroFrontEndTwo;
+import React from"react";function MicroFrontEndTwo(){const[t,e]=React.useState(!1);return React.createElement("div",null,"This is micro frontend two",React.createElement("button",{type:"button",onClick:()=>e(!t)},"show me more"),t&&"Hey This is working")}export default MicroFrontEndTwo;
